@@ -1,0 +1,34 @@
+TITLE: ECLSK Achievement
+
+DATA: "../data/eclskwide.dat"
+
+VARIABLE: 
+  names = id Sex Race SES PreK District_Poverty 
+  Math_0 Math_0.5 Math_1 Math_1.5 Math_2 
+  Math_2.5 Math_3.5 Math_4.5 Math_5.5 Reading_0 
+  Reading_0.5 Reading_1 Reading_1.5 Reading_2 
+  Reading_2.5 Reading_3.5 Reading_4.5 Reading_5.5 
+  Science_0 Science_0.5 Science_1 Science_1.5 
+  Science_2 Science_2.5 Science_3.5 Science_4.5 
+  Science_5.5 DCCS_0 DCCS_0.5 DCCS_1 DCCS_1.5 
+  DCCS_2 DCCS_2.5 DCCS_3.5 DCCS_4.5 DCCS_5.5 
+  Numbers_Reversed_0 Numbers_Reversed_0.5 
+  Numbers_Reversed_1 Numbers_Reversed_1.5 
+  Numbers_Reversed_2 Numbers_Reversed_2.5 
+  Numbers_Reversed_3.5 Numbers_Reversed_4.5 
+  Numbers_Reversed_5.5 Numbers_Reversed_(W-ability)_0 
+  Numbers_Reversed_(W-ability)_0.5 
+  Numbers_Reversed_(W-ability)_1 
+  Numbers_Reversed_(W-ability)_1.5 
+  Numbers_Reversed_(W-ability)_2 
+  Numbers_Reversed_(W-ability)_2.5 
+  Numbers_Reversed_(W-ability)_3.5 
+  Numbers_Reversed_(W-ability)_4.5 
+  Numbers_Reversed_(W-ability)_5.5;
+ 
+ MISSING = .;
+ 
+  
+ANALYSIS: basic;
+  
+ 

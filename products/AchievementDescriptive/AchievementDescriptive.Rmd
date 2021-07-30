@@ -1,0 +1,54 @@
+---
+title: "Achievement Descriptive Report"
+author: "William Murrah"
+date: "7/30/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(psych)
+library(car)
+library(modelsummary)
+```
+
+
+```{r}
+eclsk <- read.csv("data/eclskwide.csv", header = TRUE, stringsAsFactors = TRUE)
+load("data/eclska300.Rdata")
+```
+
+```{r}
+par(mfrow = c(2,2))
+hist(eclsk$Math_0)
+hist(eclsk$Math_5.5)
+hist(eclsk$Science_0.5)
+hist(eclsk$Science_5.5)
+par(mfrow = c(1,1))
+```
+
+```{r}
+plot(Math_5.5 ~ Math_0, data = eclsk)
+```
+
+```{r}
+ggplot(eclsk, aes(x = Math_0, y = Math_5.5, color = Sex)) + 
+  geom_point()
+```
+
+
+```{r}
+ggplot(eclska300, aes(x = Age, y = Math, group = id)) + geom_line() +
+  geom_point(alpha = .5)
+```
+
+```{r}
+datasummary_skim(eclsk[ ,-1], type = "numeric", histogram = FALSE)
+```
+
+```{r}
+datasummary_skim(eclsk, type = "categorical")
+```
+
+
